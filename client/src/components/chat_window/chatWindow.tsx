@@ -32,7 +32,7 @@ function ChatWindow(props: TChatWindowProps) {
 }
 
 function Conversation(){
-    return <div  className="overflow-auto flex-grow-1">
+    return <div  className="overflow-auto">
         <div className="" style={{ backgroundColor: "grey", "height": "200px"}}></div>
         <div className="" style={{ backgroundColor: "red", "height": "300px"}}></div>
         <div className="" style={{ backgroundColor: "yellow", "height": "500px"}}></div>
