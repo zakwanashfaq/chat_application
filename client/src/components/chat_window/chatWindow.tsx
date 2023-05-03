@@ -19,13 +19,13 @@ function ChatWindow(props: TChatWindowProps) {
     return <div className="d-flex flex-column vh-100">
         <nav className="navbar sticky-top bg-body-tertiary">
             <div className="container-fluid">
-                <a className="navbar-brand" >Fixed top</a>
+                <a className="navbar-brand ms-auto">Notification Components here</a>
             </div>
         </nav>
         <Conversation />
         <div className="navbar sticky-bottom bg-body-tertiary">
             <div className="container-fluid">
-                <a className="navbar-brand">Sticky bottom</a>
+                <a className="navbar-brand">Input component here</a>
             </div>
         </div>
     </div>
