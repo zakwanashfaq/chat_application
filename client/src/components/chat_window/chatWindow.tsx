@@ -8,7 +8,11 @@ export default function ChatPage(params: any) {
                     <SideBar />
                 </div>
                 <div className="col-9 px-0">
+                    <div className="d-flex flex-row h-100">
+                    <div style={{width: "10px", height: "100%", backgroundColor: "lightGrey"}}></div>
                     <ChatWindow roomID="sdsd" />
+                    </div>
+                        
                 </div>
             </div>
         </div>
@@ -16,7 +20,7 @@ export default function ChatPage(params: any) {
 }
 
 function ChatWindow(props: TChatWindowProps) {
-    return <div className="d-flex flex-column vh-100">
+    return <div className="d-flex flex-column vh-100 w-100">
         <nav className="navbar sticky-top bg-body-tertiary">
             <div className="container-fluid">
                 <a className="navbar-brand ms-auto">Notification Components here</a>
