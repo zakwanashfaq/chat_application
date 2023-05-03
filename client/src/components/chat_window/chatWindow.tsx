@@ -16,8 +16,27 @@ export default function ChatPage(params: any) {
 }
 
 function ChatWindow(props: TChatWindowProps) {
-    return <div className="d-flex flex-column w-100 vh-100 overflow-auto ">
-        <div className=" vh-100" style={{ backgroundColor: "grey" }}></div>
+    return <div className="d-flex flex-column vh-100">
+        <nav className="navbar sticky-top bg-body-tertiary">
+            <div className="container-fluid">
+                <a className="navbar-brand" >Fixed top</a>
+            </div>
+        </nav>
+        <Conversation />
+        <div className="navbar sticky-bottom bg-body-tertiary">
+            <div className="container-fluid">
+                <a className="navbar-brand">Sticky bottom</a>
+            </div>
+        </div>
+    </div>
+}
+
+function Conversation(){
+    return <div  className="overflow-auto flex-grow-1">
+        <div className="" style={{ backgroundColor: "grey", "height": "200px"}}></div>
+        <div className="" style={{ backgroundColor: "red", "height": "300px"}}></div>
+        <div className="" style={{ backgroundColor: "yellow", "height": "500px"}}></div>
+        <div className="" style={{ backgroundColor: "green", "height": "200px"}}></div>
     </div>
 }
 
