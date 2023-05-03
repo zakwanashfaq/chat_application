@@ -30,7 +30,10 @@ export default function LoginPage() {
               <button className="w-100 btn btn-dark" type="submit">Sign in as "Test User 2"</button>
             </div>
           </div>
-          <p className="mt-5 mb-3 text-body-secondary">©2023</p>
+          <div className="mt-4">
+            <a className="text-body-secondary" href="/signup" target="_self">Sign up for an account</a>
+          </div>
+          <p className="mt-5 mb-3 text-body-secondary">© Real-time chat app - 2023</p>
         </form>
       </main>
     </div>
