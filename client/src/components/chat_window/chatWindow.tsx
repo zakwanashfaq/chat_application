@@ -1,10 +1,10 @@
 import { TChatWindowProps } from "../../types"
 
 export default function ChatPage(params: any) {
-    return <div>
+    return <div className="vh-100">
         <div className="container-fluid">
             <div className="row">
-                <nav className="navbar bg-body-tertiary">
+                <nav className="navbar bg-dark" data-bs-theme="dark">
                     <div className="container-fluid">
                         <a className="navbar-brand">Real-time Chat Application</a>
                         <a className="navbar-brand ms-auto">Notification Components here</a>
@@ -16,8 +16,8 @@ export default function ChatPage(params: any) {
                     <SideBar />
                 </div>
                 <div className="col-9 px-0">
-                    <div className="d-flex flex-row h-100">
-                        <div style={{ width: "2px", height: "100%", backgroundColor: "lightGrey" }}></div>
+                    <div className="d-flex flex-row">
+                        <div style={{ width: "5px", backgroundColor: "lightGrey" }}></div>
                         <ChatWindow roomID="sdsd" />
                     </div>
 
@@ -28,7 +28,7 @@ export default function ChatPage(params: any) {
 }
 
 function ChatWindow(props: TChatWindowProps) {
-    return <div className="d-flex flex-column vh-100 w-100">
+    return <div className="d-flex flex-column w-100" style={{ height: "700px" }}>
         <Conversation />
         <div className="navbar sticky-bottom bg-body-tertiary">
             <div className="container-fluid">
@@ -41,15 +41,15 @@ function ChatWindow(props: TChatWindowProps) {
 function Conversation() {
     return <div className="overflow-auto">
         <div className="" style={{ backgroundColor: "grey", "height": "200px" }}></div>
-        <div className="" style={{ backgroundColor: "red", "height": "300px" }}></div>
-        <div className="" style={{ backgroundColor: "yellow", "height": "500px" }}></div>
+        <div className="" style={{ backgroundColor: "lightgrey", "height": "300px" }}></div>
+        <div className="" style={{ backgroundColor: "darkgrey", "height": "500px" }}></div>
         <div className="" style={{ backgroundColor: "green", "height": "200px" }}></div>
     </div>
 }
 
 function SideBar() {
-    return <div className="d-flex flex-column vh-100  align-items-stretch flex-shrink-0 bg-body-tertiary">
-        <a href="/" className="d-flex align-items-center flex-shrink-0 px-3 py-2 link-body-emphasis text-decoration-none border-bottom">
+    return <div className="d-flex flex-column align-items-stretch flex-shrink-0 bg-body-tertiary" style={{ height: "700px" }}>
+        <a href="/" className="d-flex align-items-center flex-shrink-0 px-3 py-2 link-body-emphasis text-decoration-none border-bottom bg-success" data-bs-theme="dark">
             {/* <svg className="bi pe-none me-2" width="30" height="24"><use xlinkHref="#bootstrap"></use></svg> */}
             <span className="fs-5 fw-semibold">All Coversations</span>
         </a>
