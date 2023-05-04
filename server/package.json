@@ -2,7 +2,7 @@
   "name": "chat-app-server",
   "version": "1.0.0",
   "description": "Server for a real-time chat application",
-  "main": "index.ts",
+  "main": "src/index.ts",
   "type": "commonjs",
   "scripts": {
     "build": "npx tsc",
