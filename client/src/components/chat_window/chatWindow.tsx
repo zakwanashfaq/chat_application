@@ -4,6 +4,14 @@ export default function ChatPage(params: any) {
     return <div>
         <div className="container-fluid">
             <div className="row">
+                <nav className="navbar bg-body-tertiary">
+                    <div className="container-fluid">
+                        <a className="navbar-brand">Real-time Chat Application</a>
+                        <a className="navbar-brand ms-auto">Notification Components here</a>
+                    </div>
+                </nav>
+            </div>
+            <div className="row">
                 <div className="col-3 px-0">
                     <SideBar />
                 </div>
@@ -21,11 +29,6 @@ export default function ChatPage(params: any) {
 
 function ChatWindow(props: TChatWindowProps) {
     return <div className="d-flex flex-column vh-100 w-100">
-        <nav className="navbar sticky-top bg-body-tertiary">
-            <div className="container-fluid">
-                <a className="navbar-brand ms-auto">Notification Components here</a>
-            </div>
-        </nav>
         <Conversation />
         <div className="navbar sticky-bottom bg-body-tertiary">
             <div className="container-fluid">
@@ -46,9 +49,9 @@ function Conversation() {
 
 function SideBar() {
     return <div className="d-flex flex-column vh-100  align-items-stretch flex-shrink-0 bg-body-tertiary">
-        <a href="/" className="d-flex align-items-center flex-shrink-0 p-3 link-body-emphasis text-decoration-none border-bottom">
-            <svg className="bi pe-none me-2" width="30" height="24"><use xlinkHref="#bootstrap"></use></svg>
-            <span className="fs-5 fw-semibold">Coversations</span>
+        <a href="/" className="d-flex align-items-center flex-shrink-0 px-3 py-2 link-body-emphasis text-decoration-none border-bottom">
+            {/* <svg className="bi pe-none me-2" width="30" height="24"><use xlinkHref="#bootstrap"></use></svg> */}
+            <span className="fs-5 fw-semibold">All Coversations</span>
         </a>
         <div className="conversation-list overflow-auto">
             <div className="list-group list-group-flush border-bottom scrollarea">
