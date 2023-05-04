@@ -1,6 +1,7 @@
 import dotenv from 'dotenv';
 import express, { Express, Request, Response } from 'express';
-import authRouter from './routes/auth';
+import authRouter from './routes/auth/auth';
+import chatRouter from './routes/chat/chat';
 
 dotenv.config();
 
@@ -12,7 +13,8 @@ app.get('/', (req: Request, res: Response) => {
   res.send('Server is running');
 });
 
-app.use('/auth', authRouter)
+app.use('/api/auth', authRouter);
+app.use('/api/chat', chatRouter);
 
 
 app.listen(port, () => {

@@ -5,18 +5,17 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const dotenv_1 = __importDefault(require("dotenv"));
 const express_1 = __importDefault(require("express"));
-const auth_1 = __importDefault(require("./routes/auth"));
+const auth_1 = __importDefault(require("./routes/auth/auth"));
+const chat_1 = __importDefault(require("./routes/chat/chat"));
 dotenv_1.default.config();
 const app = (0, express_1.default)();
 const port = process.env.PORT;
 app.use(express_1.default.json());
 app.get('/', (req, res) => {
-    res.send('Server initialized');
+    res.send('Server is running');
 });
-app.use('/auth', auth_1.default);
-app.get('/3', (req, res) => {
-    res.send('3333');
-});
+app.use('/api/auth', auth_1.default);
+app.use('/api/chat', chat_1.default);
 app.listen(port, () => {
     console.log(`[server]: Server is running at http://localhost:${port}`);
 });
