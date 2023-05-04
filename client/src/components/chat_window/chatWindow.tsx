@@ -1,7 +1,7 @@
 import { TChatWindowProps } from "../../types"
 
 export default function ChatPage(params: any) {
-    return <div className="vh-100">
+    return <div className="mh-100 p-0 m-0">
         <div className="container-fluid">
             <div className="row">
                 <nav className="navbar bg-dark" data-bs-theme="dark">
@@ -20,7 +20,6 @@ export default function ChatPage(params: any) {
                         <div style={{ width: "5px", backgroundColor: "lightGrey" }}></div>
                         <ChatWindow roomID="sdsd" />
                     </div>
-
                 </div>
             </div>
         </div>
@@ -28,7 +27,7 @@ export default function ChatPage(params: any) {
 }
 
 function ChatWindow(props: TChatWindowProps) {
-    return <div className="d-flex flex-column w-100" style={{ height: "700px" }}>
+    return <div className="d-flex flex-column w-100 vh-100">
         <Conversation />
         <div className="navbar sticky-bottom bg-body-tertiary">
             <div className="container-fluid">
@@ -48,7 +47,7 @@ function Conversation() {
 }
 
 function SideBar() {
-    return <div className="d-flex flex-column align-items-stretch flex-shrink-0 bg-body-tertiary" style={{ height: "700px" }}>
+    return <div className="d-flex vh-100 flex-column align-items-stretch flex-shrink-0 bg-body-tertiary">
         <a href="/" className="d-flex align-items-center flex-shrink-0 px-3 py-2 link-body-emphasis text-decoration-none border-bottom bg-success" data-bs-theme="dark">
             {/* <svg className="bi pe-none me-2" width="30" height="24"><use xlinkHref="#bootstrap"></use></svg> */}
             <span className="fs-5 fw-semibold">All Coversations</span>
