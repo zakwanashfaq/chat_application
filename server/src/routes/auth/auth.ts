@@ -1,4 +1,5 @@
 import { Router, Request, Response } from "express";
+import { addUser } from "../../db/users/users";
 
 const authRouter = Router();
 
@@ -11,6 +12,7 @@ authRouter.get("/login", (req: Request, res: Response) => {
 })
 
 authRouter.get("/signup", (req: Request, res: Response) => {
+    addUser({});
     res.send("signup!");
 })
 
