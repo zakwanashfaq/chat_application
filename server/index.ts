@@ -9,14 +9,11 @@ const port = process.env.PORT;
 app.use(express.json());
 
 app.get('/', (req: Request, res: Response) => {
-  res.send('Server initialized');
+  res.send('Server is running');
 });
 
 app.use('/auth', authRouter)
 
-app.get('/3', (req: Request, res: Response) => {
-  res.send('3333');
-});
 
 app.listen(port, () => {
   console.log(`[server]: Server is running at http://localhost:${port}`);
