@@ -1,9 +1,11 @@
-import { Router } from "express";
-const authRouter = Router();
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const authRouter = (0, express_1.Router)();
 authRouter.get("/", (req, res) => {
     res.send("auth home!");
 });
 authRouter.get("/login", (req, res) => {
     res.send("login!");
 });
-export default authRouter;
+exports.default = authRouter;
