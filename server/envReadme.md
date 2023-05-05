@@ -4,3 +4,4 @@ PORT=5000
 REGION=us-east-1
 AWS_ACCESS_KEY= Insert access key here
 AWS_SECRET_KEY= Insert secret access key here
+JWT_SECRET_KEY= Insert json hash key here

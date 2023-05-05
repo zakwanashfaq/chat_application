@@ -1,5 +1,6 @@
 import { Router, Request, Response } from "express";
 import { addUser } from "../../db/users/users";
+import { login } from "./login";
 
 const authRouter = Router();
 
@@ -7,12 +8,11 @@ authRouter.get("/", (req: Request, res: Response) => {
     res.send("auth home!");
 })
 
-authRouter.get("/login", (req: Request, res: Response) => {
-    res.send("login!");
-})
+authRouter.post("/login", login)
 
 authRouter.get("/signup", (req: Request, res: Response) => {
-    addUser({});
+    // validatePayloadFromBody(req.body);
+    // addUser({});
     res.send("signup!");
 })
 
