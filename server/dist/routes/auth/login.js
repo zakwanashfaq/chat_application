@@ -18,7 +18,7 @@ async function login(req, res) {
         return res.status(401).json({ message: 'Invalid credentials' });
     }
     jsonwebtoken_1.default.sign({ username }, process.env.JWT_SECRET_KEY, {
-        expiresIn: '60s'
+        expiresIn: '30d'
     }, (err, token) => {
         if (err) {
             res.status(500).json({ message: err.message });

@@ -18,7 +18,7 @@ export async function login(req: Request, res: Response) {
     }   
     
     jwt.sign({ username } as TUserTokenInputPayload, process.env.JWT_SECRET_KEY as Secret, {
-        expiresIn: '60s'
+        expiresIn: '30d'
     }, (err: Error | null, token?: string) => {
         if (err) {
             res.status(500).json({ message: err.message });
